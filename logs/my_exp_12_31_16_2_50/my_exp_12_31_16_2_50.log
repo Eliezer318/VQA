@@ -1,0 +1,24 @@
+[2020-12-31 16:02:50,883] [TRAIN] - main:
+  experiment_name_prefix: my_exp
+  seed: 1
+  num_workers: 6
+  parallel: true
+  gpus_to_use: 0,1,2
+  trains: false
+  paths:
+    train: data/train_target.pkl
+    validation: data/val_target.pkl
+    logs: logs/
+train:
+  num_epochs: 1
+  grad_clip: 0.25
+  dropout: 0.3
+  num_hid: 500
+  batch_size: 40
+  save_model: false
+  lr:
+    lr_value: 0.01
+    lr_decay: 15
+    lr_gamma: 0.1
+    lr_step_size: 30
+
